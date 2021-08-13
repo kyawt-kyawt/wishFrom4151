@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wish From WDF4151</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="img/favicon.png" rel="icon" type="image/png" sizes="16x16" />
+</head>
+            <style type="text/css">
+                body{
+                    background-image: url("img/bg.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    overflow: hidden;
+                }
+
+                .container {
+                    position: relative;
+                }
+
+                .c1{
+                    position: absolute;
+                    top: -115px;
+                    left: 50px;
+                }
+
+                .c1 img{
+                    width: 320px;
+                    height: 300px;
+                }
+
+                .c1 img:nth-child(2),.c1 img:nth-child(3){
+                    margin-left: 50px;
+                }
+
+                img.balloon1,img.balloon2{
+                    width: 200px;
+                    height: 200px;
+
+                    opacity: 0.5;
+                }
+
+                .balloon1{
+                    transform: translate(50px,800px);
+                }
+
+                .balloon2{
+                    transform: translate(700px,800px);
+                }
+
+                img.balloon1{
+                    animation: up 2s forwards;
+                }
+
+                img.balloon2{
+                    animation: up1 2s forwards;
+                }
+
+                @keyframes up {
+                    100%{
+                        transform: translate(50px,200px);
+                    }
+                }
+
+                @keyframes up1 {
+                    100%{
+                        transform: translate(800px,250px);
+                    }
+                }
+
+                /*This below is bdcard*/
+
+                .card{
+                    display: flex;
+                    align-items: center;
+
+                    transform: translateY(500px);
+                    animation: myani 2s forwards;
+                    animation-delay: 1s;
+                }
+
+                .birthdayCard {
+                    width: 250px;
+                    height:280px;
+                    cursor: pointer;
+
+                    position: relative;
+
+                    transform-style: preserve-3d;
+                    transform: perspective(2500px);
+                }
+
+                @keyframes myani{
+                    100% {
+                        transform: translateY(-250px);
+                    }
+                }
+
+                .cardcover,.cardword{
+                    width: 100%;
+                    height:100%;
+
+                    position: absolute;
+                    top: 230px;
+                    left: 520px;
+                }
+
+                .cardcover {
+
+                    /*background-color: #f77793;*/
+                    background-color: skyblue;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    box-shadow: inset 50px 20px 100px rgba(0,0,0,.2), 30px 0 50px rgba(0,0,0,0.2);
+                    overflow: hidden;
+
+                    transform-origin: left;
+                    transition: .6s;
+
+                }
+
+                .cardcover .bdword{
+                    width: 200px;
+                    height: 200px;
+
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                p {
+                    margin-left: 10px;
+                    letter-spacing: 2px;
+                    line-height: 25px;
+                    color: #333;
+                }
+
+                p .planting{
+                    width: 90px;
+                    height: 90px;
+
+                    position: absolute;
+                    top: 180px;
+                    left: 90px;
+                }
+
+                .cardword {
+
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    z-index:-1;
+
+                    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+                }
+
+                .birthdayCard:hover {
+                    transform: perspective(2500px) rotate(5deg);
+                }
+
+                .birthdayCard:hover .cardcover {
+                    transform: rotateY(-160deg);
+                }
+
+                .birthdayCard:hover .bdword {
+                    visibility:hidden;
+                }
+
+                .btn1 {
+                    padding: 10px;
+                    background-color: #e6c3fa;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    color: black;
+                    box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+                }
+
+
+
+
+            </style>
+<body>
+
+    <div class="container" >
+        <div class="c1">
+            <img src="img/myedit.png" alt="myedit" />
+            <img src="img/myedit.png" alt="myedit" />
+            <img src="img/myedit.png" alt="myedit" />
+        </div>
+
+    </div>
+
+    <img src="img/balloon.png" alt="balloon" class="balloon1" />
+    <img src="img/balloon.png" alt="balloon" class="balloon2" />
+
+
+    <div class="card">
+    <div class="birthdayCard">
+        <div class="cardcover">
+            <img src="img/bdword.png" alt="bdword" class="bdword" />
+        </div>
+
+        <div class="cardword">
+            <p>
+                <img src="img/planting.gif" alt="planting" class="planting" />
+                Happy Birthday Sayar! I made this little animation as much as I can & hope you enjoy this. May all good luck comes to you & be healthy. You're an amazing person. Let me praise as a gardener.
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <a href="#" id="btn" class="btn1">Back To Team Page</a>
+
+    <script type="text/javascript"></script>
+
+</body>
+</html>
