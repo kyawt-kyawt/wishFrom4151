@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Wish From WDF4151</title>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="img/favicon.png" rel="icon" type="image/png" sizes="16x16" />
 </head>
@@ -33,11 +35,98 @@
                     margin-left: 50px;
                 }
 
+                .happy{
+                    width: 90%;
+                    position: absolute;
+                    transform: translate(80px,120px);
+                    text-align: center;
+                    letter-spacing: 2px;
+
+                    z-index: -1;
+                }
+
+                .happy span{
+                   font-family: 'Poppings', sans-serif;
+                    display: inline-block;
+                    font-size: 35px;
+                    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+                    /*color: #ffb56b;*/
+                    color: #f09e4d;
+                    /*color:#c972f7;*/
+                    opacity: 0;
+
+                    transform: translateY(-500%);
+                    animation:fall 3s forwards;
+
+                }
+
+
+                @keyframes fall {
+                    to{
+                        transform: translateY(0);
+                        opacity: 0.5;
+                    }
+                }
+
+                .happy span:nth-child(1){
+                    animation-delay: 0s;
+                }
+
+                .happy span:nth-child(2){
+                    animation-delay: 0.1s;
+                }
+
+                 .happy span:nth-child(3){
+                    animation-delay: 0.2s;
+                }
+
+                 .happy span:nth-child(4){
+                    animation-delay: 0.3s;
+                }
+
+                 .happy span:nth-child(5){
+                    margin-right: 20px;
+                    animation-delay: 0.4s;
+                }
+
+                 .happy span:nth-child(6){
+                    animation-delay: 0.5s;
+                }
+
+                 .happy span:nth-child(7){
+                    animation-delay: 0.6s;
+                }
+
+                 .happy span:nth-child(8){
+                    animation-delay: 0.7s;
+                }
+
+                 .happy span:nth-child(9){
+                    animation-delay: 0.8s;
+                }
+
+                 .happy span:nth-child(10){
+                    animation-delay: 0.9s;
+                }
+
+                 .happy span:nth-child(11){
+                    animation-delay: 1.0s;
+                }
+
+                 .happy span:nth-child(12){
+                    animation-delay: 1.1s;
+                }
+
+                 .happy span:nth-child(13){
+                    animation-delay: 1.2s;
+                }
+
+
                 img.balloon1,img.balloon2{
                     width: 200px;
                     height: 200px;
 
-                    opacity: 0.5;
+                    opacity: 0.3;
                 }
 
                 .balloon1{
@@ -76,7 +165,7 @@
 
                     transform: translateY(500px);
                     animation: myani 2s forwards;
-                    animation-delay: 1s;
+                    animation-delay: 3s;
                 }
 
                 .birthdayCard {
@@ -92,7 +181,7 @@
 
                 @keyframes myani{
                     100% {
-                        transform: translateY(-250px);
+                        transform: translateY(-230px);
                     }
                 }
 
@@ -107,7 +196,6 @@
 
                 .cardcover {
 
-                    /*background-color: #f77793;*/
                     background-color: skyblue;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
@@ -125,6 +213,14 @@
 
                     position: absolute;
                     left: 0;
+                    bottom: 0;
+                }
+
+                .cardcover span{
+                   font-family: 'MonteCarlo', cursive;
+                    font-size: 25px;
+                    position: absolute;
+                    right: 10px;
                     bottom: 0;
                 }
 
@@ -153,6 +249,7 @@
                     box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
                 }
 
+
                 .birthdayCard:hover {
                     transform: perspective(2500px) rotate(5deg);
                 }
@@ -165,6 +262,10 @@
                     visibility:hidden;
                 }
 
+                .birthdayCard:hover span{
+                    visibility: hidden;
+                }
+
                 .btn1 {
                     padding: 10px;
                     background-color: #e6c3fa;
@@ -173,9 +274,6 @@
                     color: black;
                     box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
                 }
-
-
-
 
             </style>
 <body>
@@ -186,8 +284,23 @@
             <img src="img/myedit.png" alt="myedit" />
             <img src="img/myedit.png" alt="myedit" />
         </div>
-
     </div>
+
+            <div class="happy">
+              <span>H</span>
+              <span>A</span>
+              <span>P</span>
+              <span>P</span>
+              <span>Y</span>
+              <span>B</span>
+              <span>I</span>
+              <span>R</span>
+              <span>T</span>
+              <span>H</span>
+              <span>D</span>
+              <span>A</span>
+              <span>Y</span>
+            </div>
 
     <img src="img/balloon.png" alt="balloon" class="balloon1" />
     <img src="img/balloon.png" alt="balloon" class="balloon2" />
@@ -197,23 +310,21 @@
     <div class="birthdayCard">
         <div class="cardcover">
             <img src="img/bdword.png" alt="bdword" class="bdword" />
+            <span>HoverMe</span>
         </div>
 
         <div class="cardword">
             <p>
                 <img src="img/planting.gif" alt="planting" class="planting" />
-                Happy Birthday Sayar! I made this little animation as much as I can & hope you enjoy this. May all good luck comes to you & be healthy. You're an amazing person. Let me praise as a gardener.
+                Happy Birthday Sayar! I made this little animation as much as I can & hope you enjoy this. May all good luck comes to you & be healthy. You're an amazing person. Let me praise you as a gardener.
             </p>
         </div>
     </div>
     </div>
 
-    <a href="https://aungmyo-genius.github.io/teampagev1/
-" id="btn" class="btn1">Back To Team Page</a>
+    <a href="#" id="btn" class="btn1">Back To Team Page</a>
 
-    <script type="text/javascript">
-        window.alert("Alert! Better view works in computer")
-    </script>
+    <script type="text/javascript"></script>
 
 </body>
 </html>
